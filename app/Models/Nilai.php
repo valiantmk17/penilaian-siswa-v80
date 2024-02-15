@@ -15,7 +15,7 @@ class Nilai extends Model
     }
     public function mengajar()
     {
-        return $this->belongsTo(Mengajar::class, 'mapel_id', 'id');
+        return $this->belongsTo(Mengajar::class, 'mengajar_id', 'id');
     }
 
 }
