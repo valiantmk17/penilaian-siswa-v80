@@ -84,7 +84,7 @@ class MengajarController extends Controller
             'mapel_id' => ['required'],
             'kelas_id' => ['required'],
         ]);
-        if($request->guru_id !=$mengajar->guru_id || $request->mapel_id !=$mengajar->mapel_id || $request->kelas_id !=$mengajar->kelas_id){
+        if($request->mapel_id !=$mengajar->mapel_id || $request->kelas_id !=$mengajar->kelas_id){
             $cek = Mengajar::where('mapel_id', $request->mapel_id)->where('kelas_id', $request->kelas_id)->first();
             if($cek){
                 return back()->with('error', 'Data Mengajar sudah ada');
